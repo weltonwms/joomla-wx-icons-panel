@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>mod_iconspanelwx</name>
+	<author>Welton Santos</author>
+	<creationDate>Junho 2018</creationDate>
+	<copyright>Copyright (C) 2018 </copyright>
+	<license>GNU General Public License version 2</license>
+	
+	<version>1.0.3</version>
+	<description>MOD_ICONSPANELWX_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_iconspanelwx">mod_iconspanelwx.php</filename>		
+		<folder>tmpl</folder>
+		<folder>elements</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_iconspanelwx.xml</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_iconspanelwx.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_iconspanelwx.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_iconspanelwx/elements">	
+				
+
+			</fieldset>
+
+			<fieldset name="icons" label="MOD_ICONSPANELWX_ICONS_LABEL" >
+				<field
+					name="icons"
+					type="wxiconsmanager"
+					label="MOD_ICONSPANELWX_ICONS_LABEL"
+					description="MOD_ICONSPANELWX_ICONS_DESC"
+					default="[]"
+					filter="raw"
+				/>
+				
+			</fieldset>
+                        
+                        <fieldset name='layout' label="MOD_ICONSPANELWX_LAYOUT_LABEL">
+                            <field
+                                name="nr_columns"
+                                type="list"
+                                label="MOD_ICONSPANELWX_NR_COLUMNS_LABEL"
+                                description="MOD_ICONSPANELWX_NR_COLUMNS_DESC"
+                                default="span-custom5"
+                            >
+                                <option value="span6">2</option>
+                                <option value="span4">3</option>
+                                <option value="span3">4</option>
+                                <option value="span-custom5">5</option>
+                                <option value="span-custom6">6</option>
+                            </field>
+                            
+                            <field
+                                name="max-width"
+                                label="MOD_ICONSPANELWX_WIDTH_PANEL_LABEL"
+                                type="text"
+                                description="MOD_ICONSPANELWX_WIDTH_PANEL_DESC"
+                                hint="Ex: 400px ou 80%"
+                                
+                                
+                            />
+                            
+                            <field
+					name="centralize"
+					type="radio"
+					label="MOD_ICONSPANELWX_CENTRALIZE_LABEL"
+					description="MOD_ICONSPANELWX_CENTRALIZE_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+                        </fieldset>
+			
+			<fieldset name="advanced">
+				
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				
+			</fieldset>
+			
+			
+		</fields>
+	</config>
+</extension>

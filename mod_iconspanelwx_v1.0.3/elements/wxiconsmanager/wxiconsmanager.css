@@ -1,0 +1,25 @@
+ul.icons_list{
+	margin-left:0;
+}
+
+ul.icons_list li{
+	display:block;
+	padding:4px;
+	
+}
+
+ul.icons_list .delete{
+	margin-left:4px;
+	color:#e0b0af;
+}
+
+ul.icons_list .delete:hover{
+	margin-left:4px;
+	color:#a23b39;
+}
+
+.items-handle{
+	color:#000;
+        cursor:move;
+}
+

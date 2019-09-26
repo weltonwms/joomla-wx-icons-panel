@@ -1,0 +1,93 @@
+/*        .row-fluid .span3 {
+                width: 14.893617021276595%;
+                *width: 14.840425531914894%;
+            }*/
+
+.mod-wxpanel .grid{
+    /*        background-color: aqua;*/
+    box-sizing:border-box;
+   
+
+
+}
+
+.mod-wxpanel .bloco-img{
+
+    margin-bottom: 10%;
+
+    /*                padding:10px;*/
+
+}
+.mod-wxpanel img{
+    max-width: 100%;
+    /*        border-radius: 10%;*/
+
+    /*        cursor: pointer;*/
+    transition: transform 1s; /* Animation */
+    opacity: 0.9;
+    /* margin: 0 auto; */
+    display: block;
+
+
+}
+
+.mod-wxpanel img:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.mod-wxpanel .row-fluid.grid [class*="span"] {
+    /*        margin-left: 3.225806451612903%;*/
+    margin-left: 1.225806451612903%;
+
+}
+
+.mod-wxpanel div.container-text {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+.mod-wxpanel .header-category, main div.container .module h2.header-category{
+    background:  #eeeff2;
+    padding-left: 10px;
+    color:#575757;
+    border-left: 5px solid #1659bf;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 25px;
+    margin-left: 8px;
+    margin-top: 30px;
+    font-weight: bold;
+    
+}
+
+.mod-wxpanel .header-category.header1, main div.container .module h2.header-category.header1{
+   margin-top: 0;
+    
+}
+
+.mod-wxpanel .drop{
+    cursor: pointer;
+}
+
+.mod-wxpanel hr.nocategory {
+/*    margin: 20px 0;
+    border: 0;
+    border-top: 3px dotted #1b1818;*/
+    
+}
+
+
+@media screen and (min-width:768px){
+    .mod-wxpanel .row-fluid .span-custom5 {
+        width:18.774%;
+    }
+
+    .mod-wxpanel .row-fluid .span-custom6 {
+        width:15.440666667%;
+    }
+
+
+}
