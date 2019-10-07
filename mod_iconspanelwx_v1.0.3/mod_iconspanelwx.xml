@@ -12,6 +12,11 @@
 	
 	<version>1.0.3</version>
 	<description>MOD_ICONSPANELWX_XML_DESCRIPTION</description>
+	<updateservers>
+		<server type="extension" priority="1" name="WX Icons Panel">
+		   https://raw.githubusercontent.com/weltonwms/joomla-wx-icons-panel/master/update.xml
+		</server>
+	</updateservers>
 	<files>
 		<filename module="mod_iconspanelwx">mod_iconspanelwx.php</filename>		
 		<folder>tmpl</folder>

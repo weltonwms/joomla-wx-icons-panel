@@ -62,12 +62,12 @@ function addIconList(icon) {
     }
     var index = checkIndex(0);
     
-    var modal_img = '<a class="modal btn" href="'+JURIBASE+'index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;e_name=img-item-list' + index + '&amp;asset=com_config" rel="{handler: \'iframe\', size: {x: 800, y: 500}}">Selecionar Imagem</a>';
-    var link_move='<a href="#" title="Arraste para Mover" class="items-handle"><i class="icon-move"></i></a>';
+    var modal_img = '<a class="modal btn" href="'+JURIBASE+'index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;e_name=img-item-list' + index + '&amp;asset=com_config" rel="{handler: \'iframe\', size: {x: 800, y: 500}}">'+TEXT_MOD_ICONSPANELWX_ACTION_IMAGE+'</a>';
+    var link_move='<a href="#" title="'+TEXT_MOD_ICONSPANELWX_ACTION_DRAG+ '" class="items-handle"><i class="icon-move"></i></a>';
     var input_link='<input type="text" name="link" value="' + valLink + '" placeholder="Link"/> ';
-     var input_categoria='<input type="text" name="categoria" value="' + valCategoria + '" placeholder="Categoria"/> ';
+     var input_categoria='<input type="text" name="categoria" value="' + valCategoria + '" placeholder="'+TEXT_MOD_ICONSPANELWX_CATEGORY+'"/> ';
     var input_img='<div class="input-append"><input type="text" name="img" value="' + valImg + '" id="img-item-list' + index + '" placeholder="Img"/> ' + modal_img + '</div>';
-    var link_delete='<a href="#"class="btn btn-default delete" title="Excluir"><i class="icon-remove"></i></a>';
+    var link_delete='<a href="#"class="btn btn-default delete" title="'+TEXT_MOD_ICONSPANELWX_ACTION_DELETE+'"><i class="icon-remove"></i></a>';
     
     var lista= link_move+input_link+ input_categoria+input_img+link_delete;
     var li = jQuery('<li class="icon_list" id="icon_list' + index + '">'+lista+'</li>');
