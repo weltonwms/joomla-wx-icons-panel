@@ -1,4 +1,13 @@
 <?php
+/**
+ * 
+ * @version             See field version manifest file
+ * @package             See field name manifest file
+ * @author		Welton Moreira dos Santos
+ * @copyright			See field copyright manifest file
+ * @license             GNU General Public License version 2 or later
+ * 
+ */
 defined('_JEXEC') or die;
 ?>
 <style>
