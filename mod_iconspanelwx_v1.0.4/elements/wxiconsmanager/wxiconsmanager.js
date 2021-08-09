@@ -25,6 +25,7 @@ function store() {
         el = jQuery(el);
         item = new Object();
         item['link'] = el.find('input[name=link]').val();
+        item['target'] = el.find('select[name=target]').val();
         item['img'] = el.find('input[name=img]').val();
         item['categoria'] = el.find('input[name=categoria]').val();
         items[i] = item;
@@ -53,23 +54,32 @@ function callIconsList() {
 function addIconList(icon) {
     var valLink = "";
     var valImg = "";
+    var valTarget = "_blank";
     var valCategoria = "";
 
     if (icon) {
         valLink = icon.link;
         valImg = icon.img;
+        valTarget =icon.target?icon.target:'_blank';
         valCategoria = icon.categoria?icon.categoria:'';
     }
     var index = checkIndex(0);
-    
+    var selectedBlank=valTarget==="_blank"?'selected':'';
+    var selectedSelf=valTarget==="_self"?'selected':'';
+
     var modal_img = '<a class="modal btn" href="'+JURIBASE+'index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;e_name=img-item-list' + index + '&amp;asset=com_config" rel="{handler: \'iframe\', size: {x: 800, y: 500}}">'+TEXT_MOD_ICONSPANELWX_ACTION_IMAGE+'</a>';
     var link_move='<a href="#" title="'+TEXT_MOD_ICONSPANELWX_ACTION_DRAG+ '" class="items-handle"><i class="icon-move"></i></a>';
     var input_link='<input type="text" name="link" value="' + valLink + '" placeholder="Link"/> ';
-     var input_categoria='<input type="text" name="categoria" value="' + valCategoria + '" placeholder="'+TEXT_MOD_ICONSPANELWX_CATEGORY+'"/> ';
+    var select_target='<select name="target">'+
+                        '<option value="_blank" '+selectedBlank+'>'+TEXT_MOD_ICONSPANELWX_TARGET_BLANK+'</option>'+
+                        '<option value="_self"  '+selectedSelf +'>'+TEXT_MOD_ICONSPANELWX_TARGET_SELF+'</option>  ' +
+                      '</select>';
+
+    var input_categoria='<input type="text" name="categoria" value="' + valCategoria + '" placeholder="'+TEXT_MOD_ICONSPANELWX_CATEGORY+'"/> ';
     var input_img='<div class="input-append"><input type="text" name="img" value="' + valImg + '" id="img-item-list' + index + '" placeholder="Img"/> ' + modal_img + '</div>';
     var link_delete='<a href="#"class="btn btn-default delete" title="'+TEXT_MOD_ICONSPANELWX_ACTION_DELETE+'"><i class="icon-remove"></i></a>';
     
-    var lista= link_move+input_link+ input_categoria+input_img+link_delete;
+    var lista= link_move+input_link+select_target+ input_categoria+input_img+link_delete;
     var li = jQuery('<li class="icon_list" id="icon_list' + index + '">'+lista+'</li>');
 
 

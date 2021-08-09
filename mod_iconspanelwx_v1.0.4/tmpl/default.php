@@ -36,7 +36,7 @@ defined('_JEXEC') or die;
         <div class="row-fluid grid">
             <?php foreach($category as $icon):?>
             <div class="<?php echo $columns?>">
-                <a href="<?php echo $icon->link ?>" target="_blank">
+            <a href="<?php echo $icon->link ?>" target="<?php echo $icon->target ?>">
                     <div class="bloco-img">
                         <img src="<?php echo $icon->img ?>">
                     </div>

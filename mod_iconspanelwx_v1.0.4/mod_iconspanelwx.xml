@@ -10,7 +10,7 @@
 	<copyright>Copyright (C) 2018 </copyright>
 	<license>GNU General Public License version 2</license>
 	
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<description>MOD_ICONSPANELWX_XML_DESCRIPTION</description>
 	<updateservers>
 		<server type="extension" priority="1" name="WX Icons Panel">
@@ -29,6 +29,8 @@
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_iconspanelwx.ini</language>
 		<language tag="en-GB">en-GB/en-GB.mod_iconspanelwx.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_iconspanelwx.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_iconspanelwx.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">

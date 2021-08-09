@@ -30,6 +30,8 @@ class JFormFieldWxiconsmanager extends JFormField {
 	$document->addScriptDeclaration("TEXT_MOD_ICONSPANELWX_ACTION_DELETE='" . JText::_( 'MOD_ICONSPANELWX_ACTION_DELETE' ) . "';");
 	$document->addScriptDeclaration("TEXT_MOD_ICONSPANELWX_ACTION_IMAGE='" . JText::_( 'MOD_ICONSPANELWX_ACTION_IMAGE' ) . "';");
 	$document->addScriptDeclaration("TEXT_MOD_ICONSPANELWX_CATEGORY='" . JText::_( 'MOD_ICONSPANELWX_CATEGORY' ) . "';");
+    $document->addScriptDeclaration("TEXT_MOD_ICONSPANELWX_TARGET_SELF='" . JText::_( 'MOD_ICONSPANELWX_TARGET_SELF' ) . "';");
+    $document->addScriptDeclaration("TEXT_MOD_ICONSPANELWX_TARGET_BLANK='" . JText::_( 'MOD_ICONSPANELWX_TARGET_BLANK' ) . "';");
 
         JHTML::_('script', 'modules/mod_iconspanelwx/elements/wxiconsmanager/wxiconsmanager.js');
         JHTML::_('stylesheet', 'modules/mod_iconspanelwx/elements/wxiconsmanager/wxiconsmanager.css');

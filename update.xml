@@ -4,7 +4,7 @@
 		<description>A module for  add icons images in a panel with link</description>
 		<element>mod_iconspanelwx</element>
 		<type>module</type>
-		<version>1.0.3</version>
+		<version>1.0.4</version>
 		
 		<downloads>
 			<downloadurl type="full" format="zip">https://sourceforge.net/projects/wx-icons-panel/files/latest/download</downloadurl>
