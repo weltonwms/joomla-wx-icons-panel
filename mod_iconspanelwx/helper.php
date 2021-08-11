@@ -32,7 +32,7 @@ class ModIconsPanelWxHelper {
 
         endforeach;
 
-        if ($lista['uncategory']):
+        if (isset($lista['uncategory']) && $lista['uncategory'] ):
             //lógica para trazer uncategory como primeira chave
             $uncategories['uncategory'] = $lista['uncategory'];
             unset($lista['uncategory']);
