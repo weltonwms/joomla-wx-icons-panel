@@ -23,3 +23,23 @@ ul.icons_list .delete:hover{
         cursor:move;
 }
 
+.input-group-text.btn{
+	background-color: #ddd;
+	border: inherit;
+}
+
+#fieldset-icons .control-label{
+	width: 0;
+	padding: 0;
+}
+
+#fieldset-icons .form-grid .input-group{
+	display: inline-flex;
+	width: inherit;
+}
+
+#fieldset-icons .form-grid input[name="categoria"]{
+	margin-left: 4px;
+    max-height: 25px;
+}
+

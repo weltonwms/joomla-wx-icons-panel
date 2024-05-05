@@ -1,8 +1,11 @@
+/*
 function jInsertEditorText(text, editor) {
     var valeur = jQuery(text).attr('src');
     jQuery('#' + editor).val(valeur);
 
 }
+*/
+var WXICONSMANAGER = {}; //configurações Globais;
 
 function checkIndex(i) {
     while (jQuery('#icon_list' + i).length) {
@@ -68,6 +71,9 @@ function addIconList(icon) {
     var selectedSelf=valTarget==="_self"?'selected':'';
 
     var modal_img = '<a class="modal btn" href="'+JURIBASE+'index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;e_name=img-item-list' + index + '&amp;asset=com_config" rel="{handler: \'iframe\', size: {x: 800, y: 500}}">'+TEXT_MOD_ICONSPANELWX_ACTION_IMAGE+'</a>';
+    modal_img = '<a class="input-group-text btn" href="javascript:void(0)" onclick="ckCallImageManagerPopup(\'img-item-list' + index + '\')">'+TEXT_MOD_ICONSPANELWX_ACTION_IMAGE+'</a>';
+
+   // modal_img = 'onclick="ckCallImageManagerPopup(\'ckslideimgname' + index + '\')"'
     var link_move='<a href="#" title="'+TEXT_MOD_ICONSPANELWX_ACTION_DRAG+ '" class="items-handle"><i class="icon-move"></i></a>';
     var input_link='<input type="text" name="link" value="' + valLink + '" placeholder="Link"/> ';
     var select_target='<select name="target">'+
@@ -76,7 +82,7 @@ function addIconList(icon) {
                       '</select>';
 
     var input_categoria='<input type="text" name="categoria" value="' + valCategoria + '" placeholder="'+TEXT_MOD_ICONSPANELWX_CATEGORY+'"/> ';
-    var input_img='<div class="input-append"><input type="text" name="img" value="' + valImg + '" id="img-item-list' + index + '" placeholder="Img"/> ' + modal_img + '</div>';
+    var input_img='<div class="input-append input-group input-group-sm"><input type="text" name="img" value="' + valImg + '" id="img-item-list' + index + '" placeholder="Img"/> ' + modal_img + '</div>';
     var link_delete='<a href="#"class="btn btn-default delete" title="'+TEXT_MOD_ICONSPANELWX_ACTION_DELETE+'"><i class="icon-remove"></i></a>';
     
     var lista= link_move+input_link+select_target+ input_categoria+input_img+link_delete;
@@ -87,9 +93,11 @@ function addIconList(icon) {
     /************************
      script para atribuir novamente o modal. Necessário, pois elementos criados dinamicamente não herdam certos eventos. 
      *************************/
+    /*
     SqueezeBox.assign(jQuery('a.modal'), {
         parse: 'rel'
     });
+    */
     jQuery('.delete').click(function (event) {
         event.preventDefault();
         remove(this.parentElement);
@@ -161,3 +169,26 @@ jQuery(document).ready(function () {
     });
 
 }); // fim document ready
+
+/**
+ * Chamadas ao CKBOX.JS. Depende do ckbox.js
+ */
+ function ckCallImageManagerPopup(id, type) {	
+    $boxfooterhtml = '<a class="ckboxmodal-button" href="javascript:void(0);" onclick="ckGetJ4Image(\'' + id + '\');CKBox.close(this);">' + TEXT_MOD_ICONSPANELWX_SAVE_CLOSE + '</a>';
+    CKBox.open({id: 'ckmediamanager', handler: 'iframe', url:  'index.php?option=com_media&view=media&e_name='+id+'&tmpl=component'
+    , footerHtml: $boxfooterhtml});
+}
+
+// automatically catch the event for the J4 media manager
+window.document.addEventListener('onMediaFileSelected', function(e) {
+   WXICONSMANAGER.selectedImage = e.detail;
+});
+
+function ckGetJ4Image(field_id) {
+    var imagePath= WXICONSMANAGER.selectedImage.path;
+    imagePath = imagePath.replace('local-images:','images');
+    jQuery('#'+field_id).val(imagePath);
+}
+/**
+ * FIM Chamadas ao CKBOX.JS.
+ */

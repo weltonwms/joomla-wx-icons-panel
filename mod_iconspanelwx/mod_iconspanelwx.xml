@@ -10,7 +10,7 @@
 	<copyright>Copyright (C) 2018 </copyright>
 	<license>GNU General Public License version 2</license>
 	
-	<version>1.0.5</version>
+	<version>4.0.0</version>
 	<description>MOD_ICONSPANELWX_XML_DESCRIPTION</description>
 	<updateservers>
 		<server type="extension" priority="1" name="WX Icons Panel">
