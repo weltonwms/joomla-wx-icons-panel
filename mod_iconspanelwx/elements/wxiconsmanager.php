@@ -18,10 +18,12 @@ class JFormFieldWxiconsmanager extends JFormField
 
     protected function getInput()
     {
-
+        $isJ4 = (JVERSION >=4)?1:0;
         JHtml::_('jquery.framework');
-        //JHTML::_('behavior.modal');
-        //JHtml::_('bootstrap.modal');
+        if(!$isJ4):
+            JHTML::_('behavior.modal');
+            JHtml::_('bootstrap.modal');
+        endif;       
         //JHtml::_('jquery.ui', array('core', 'sortable'));
         JHTML::_('script', 'modules/mod_iconspanelwx/elements/wxiconsmanager/jquery-uick-custom.js');
         JHTML::_('script', 'modules/mod_iconspanelwx/elements/wxiconsmanager/ckbox.js');
@@ -32,6 +34,7 @@ class JFormFieldWxiconsmanager extends JFormField
         $document = JFactory::getDocument();
         $document->addScriptDeclaration("JURI='" . JURI::root() . "';");
         $document->addScriptDeclaration("JURIBASE='" . JURI::base() . "';");
+        $document->addScriptDeclaration("ISJ4=parseInt('" . $isJ4 . "');");
         $document->addScriptDeclaration("TEXT_MOD_ICONSPANELWX_ACTION_ADD='" . JText::_('MOD_ICONSPANELWX_ACTION_ADD') . "';");
         $document->addScriptDeclaration("TEXT_MOD_ICONSPANELWX_ACTION_DRAG='" . JText::_('MOD_ICONSPANELWX_ACTION_DRAG') . "';");
         $document->addScriptDeclaration("TEXT_MOD_ICONSPANELWX_ACTION_DELETE='" . JText::_('MOD_ICONSPANELWX_ACTION_DELETE') . "';");
