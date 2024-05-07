@@ -59,9 +59,9 @@
                                 description="MOD_ICONSPANELWX_NR_COLUMNS_DESC"
                                 default="span-custom5"
                             >
-                                <option value="span6">2</option>
-                                <option value="span4">3</option>
-                                <option value="span3">4</option>
+                                <option value="span6 col-md-6">2</option>
+                                <option value="span4 col-md-4">3</option>
+                                <option value="span3 col-md-3">4</option>
                                 <option value="span-custom5">5</option>
                                 <option value="span-custom6">6</option>
                             </field>

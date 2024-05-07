@@ -33,7 +33,7 @@ defined('_JEXEC') or die;
     <?php else:?>
 <!--    <hr class="nocategory">-->
     <?php endif;?>
-        <div class="row-fluid grid">
+        <div class="row row-fluid grid">
             <?php foreach($category as $icon):?>
             <div class="<?php echo $columns?>">
             <a href="<?php echo $icon->link ?>" target="<?php echo $icon->target ?>">
